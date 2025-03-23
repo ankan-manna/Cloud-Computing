@@ -26,38 +26,64 @@
 
 ### 1. List Available Tables:
 
+```sh
 aws dynamodb list-tables
+```
+
 ## CRUD Operations in Amazon DynamoDB (CLI)
 
 ### 1. Create a Table
 
+```sh
 aws dynamodb create-table --table-name <table_name> \
 --attribute-definitions AttributeName=<partition-key>,AttributeType=<S/N> \
 --key-schema AttributeName=Id,KeyType=HASH \
 --provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=6
-### 2. Insert data in Table
+```
 
+### 2. Insert Data in Table
+
+```sh
 aws dynamodb put-item --table-name <table_name> \
 --item '{"partition_key":{"N":"101"}, "name":{"S":"John Doe"}}'
-###3. Retrieve All Data (Read - Scan)
+```
+
+### 3. Retrieve All Data (Read - Scan)
+
+```sh
 aws dynamodb scan --table-name <table_name>
-###4. Retrieve a Specific Item (Read - Get)
+```
+
+### 4. Retrieve a Specific Item (Read - Get)
+
+```sh
 aws dynamodb get-item --table-name <table_name> \
 --key '{"partition_key":{"S":"101"}}'
+```
 
-###5. Update an Item
+### 5. Update an Item
 
+```sh
 aws dynamodb update-item --table-name <table_name> \
 --key '{"partition_key":{"N":"101"}}' \
 --update-expression "SET name = :new_name" \
 --expression-attribute-values '{":new_name":{"S":"Jane Doe"}}'
-###6. Delete an Item
+```
 
+### 6. Delete an Item
+
+```sh
 aws dynamodb delete-item --table-name <table_name> \
 --key '{"partition_key":{"N":"101"}}'
-###7. Delete a Table
+```
 
+### 7. Delete a Table
+
+```sh
 aws dynamodb delete-table --table-name <table_name>
+```
+
+
 #*********************************************************************************************************************************
 ## Amazon RDS (SQL Database) Setup
 
