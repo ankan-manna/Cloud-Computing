@@ -81,11 +81,7 @@ This guide walks through setting up an Application Load Balancer in AWS with two
 
 ---
 
-## Notes
-
-- You can test balancing by stopping one instance — traffic should route to the other.
-- Use Elastic IPs and Auto Scaling for improved production-readiness.
-- Monitor health checks from the **Target Group dashboard**.
+#*********************************************************************************************************************************
 
 
 
