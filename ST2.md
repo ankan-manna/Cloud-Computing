@@ -78,6 +78,9 @@ This guide walks through setting up an Application Load Balancer in AWS with two
     - Copy the **DNS name** from the description tab.
     - Paste it into your browser.
     - You should see one of the two instance pages (showing hostname/IP) — this verifies load balancing is working.
+    - when you refresh or open it in incognito then you might be see the ip address will be change due to this line.
+    - echo "IP Address: $(hostname -I)" > /var/www/html/index.html
+
 
 ---
 
