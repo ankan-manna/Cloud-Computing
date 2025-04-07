@@ -77,6 +77,7 @@ This guide walks through setting up an Application Load Balancer in AWS with two
     - Go to **Load Balancers → Your ALB**.
     - Copy the **DNS name** from the description tab.
     - Paste it into your browser.
+    - You're using a Load Balancer to distribute incoming traffic between two EC2 instances. When you "access the server", you're actually visiting the Load Balancer, not the EC2s directly. The Load Balancer then forwards your request to one of the instances based on its algorithm.
     - You should see one of the two instance pages (showing hostname/IP) — this verifies load balancing is working.
     - when you refresh or open it in incognito then you might be see the ip address will be change due to this line.
     - echo "IP Address: $(hostname -I)" > /var/www/html/index.html
