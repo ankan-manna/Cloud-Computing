@@ -1,6 +1,92 @@
 # =========================================
 # Cloud Computing Guide
 # =========================================
+## AWS Load Balancer Setup Guide (Application Load Balancer)
+
+This guide walks through setting up an Application Load Balancer in AWS with two Amazon Linux EC2 instances. The goal is to distribute incoming traffic across multiple instances for better scalability and availability.
+
+---
+
+## 1. Launch EC2 Instances
+
+1. **Create 2 EC2 instances**:
+    - **AMI**: Amazon Linux (Ubuntu also works, but install Apache2 instead).
+    - Select **two different subnets**, each in a **different Availability Zone (AZ)**.
+    - Edit **network settings**:
+        - Add **Security Group** with **HTTP (port 80)** and **SSH (port 22)** enabled.
+
+2. **Setup HTTP server on each instance**:
+    - Use the following **User Data** script during instance launch or run manually via SSH:
+    ```bash
+    #!/bin/bash
+    yum update -y
+    yum install httpd -y   # For Ubuntu, use: apt install apache2 -y
+    systemctl start httpd
+    systemctl enable httpd
+    echo "IP Address: $(hostname -I)" > /var/www/html/index.html
+    systemctl restart httpd
+    ```
+
+---
+
+## 2. Create Target Group
+
+1. Navigate to **EC2 Dashboard → Target Groups**.
+2. Click **Create target group**.
+3. **Type**: Choose `Instances`.
+4. Provide a **name** for your Target Group (e.g., `my-tg`).
+5. **Protocol**: HTTP
+6. **IP address type**: IPv4
+7. **VPC**: Select your VPC.
+8. **Protocol version**: HTTP1 (slow) or HTTP2 (fast) — choose as per requirement.
+9. **Health check settings**:
+    - Protocol: HTTP
+    - Path: `/`
+10. Click **Next**, then:
+    - Add your previously launched EC2 instances.
+    - Click **Register** to attach instances to the Target Group.
+
+---
+
+## 3. Create Application Load Balancer (ALB)
+
+1. Go to **EC2 Dashboard → Load Balancers**.
+2. Click **Create Load Balancer** → Select **Application Load Balancer**.
+3. **Name** your load balancer.
+4. **Scheme**:
+    - `Internet-facing` (for public access)
+    - `Internal` (for private access within VPC)
+5. **Availability Zones**:
+    - Select all AZs where your EC2 instances are running.
+6. **Security Group**:
+    - Create a new Security Group or select an existing one.
+    - Allow:
+        - HTTP (port 80)
+        - SSH (port 22)
+7. **Listener and Routing**:
+    - Listener protocol: HTTP on port 80
+    - Default action: Forward to your **Target Group** created earlier.
+
+8. Click **Create Load Balancer**.
+
+---
+
+## 4. Access Your Server
+
+- After the ALB is successfully created:
+    - Go to **Load Balancers → Your ALB**.
+    - Copy the **DNS name** from the description tab.
+    - Paste it into your browser.
+    - You should see one of the two instance pages (showing hostname/IP) — this verifies load balancing is working.
+
+---
+
+## Notes
+
+- You can test balancing by stopping one instance — traffic should route to the other.
+- Use Elastic IPs and Auto Scaling for improved production-readiness.
+- Monitor health checks from the **Target Group dashboard**.
+
 
 
 ## Amazon DynamoDB Setup
