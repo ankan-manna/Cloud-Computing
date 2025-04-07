@@ -126,7 +126,7 @@ aws dynamodb create-table --table-name <table_name> \
 --key-schema AttributeName=Id,KeyType=HASH \
 --provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=6
 ```
-
+###(*) If it short-ket -> then keyType=RANGE
 ### 2. Insert Data in Table
 
 ```sh
