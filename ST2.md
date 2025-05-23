@@ -504,8 +504,8 @@ SELECT * FROM <table_name>;
 - Use **FIFO** topics when message order is critical.
 - Messages can be **encrypted** for security compliance.
 
-#*********************************************************************************************************************************
-## AWS CloudWatch Setup
+# *******************************************************************************
+# AWS CloudWatch Setup
 
 ### Steps to Create a CloudWatch Dashboard and Set Up Alarms  
 
