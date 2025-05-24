@@ -1,3 +1,35 @@
+# AWS Lambda
+
+## 1. Overview: What, Where, and Why
+
+- **Problem it solves**: Runs code without provisioning or managing servers.
+- **Where it's used**: Event-driven applications, microservices, serverless backend processing.
+- **Why use it**: Automatically scales, integrates with other AWS services, and reduces operational overhead.
+
+## 2. Steps to Set Up
+
+1. Navigate to AWS Lambda → Click **Create Function**.
+2. Choose author from scratch / container / blueprint.
+3. Enter Function Name and select Runtime (e.g., Node.js 18.x).
+4. Configure permissions:
+   - Create or choose an IAM role.
+   - Attach permissions like access to S3, CloudWatch, Kinesis.
+5. Write or paste your code → Click **Deploy**.
+6. **Create Function URL** (optional):
+   - Go to function → Function URL → Create.
+   - Click the URL to test.
+7. Set Environment Variables (if needed).
+8. Add Trigger:
+   - E.g., S3: Create bucket → Lambda → Add Trigger → Select S3 bucket.
+   - E.g., Kinesis: Create Data Stream → Add as Trigger.
+
+## 3. Output
+The Lambda function processes data and sends the output to configured destination (e.g., S3, CloudWatch).
+
+---
+***
+
+
 # AWS Kinesis
 
 ## 1. Overview: What, Where, and Why
@@ -29,37 +61,6 @@
 1. Go to Lambda → Select Function → Add Trigger.
 2. For Producer: Select Kinesis.
 3. For Consumer: Select S3 bucket or another destination.
-
----
-***
-
-# AWS Lambda
-
-## 1. Overview: What, Where, and Why
-
-- **Problem it solves**: Runs code without provisioning or managing servers.
-- **Where it's used**: Event-driven applications, microservices, serverless backend processing.
-- **Why use it**: Automatically scales, integrates with other AWS services, and reduces operational overhead.
-
-## 2. Steps to Set Up
-
-1. Navigate to AWS Lambda → Click **Create Function**.
-2. Choose author from scratch / container / blueprint.
-3. Enter Function Name and select Runtime (e.g., Node.js 18.x).
-4. Configure permissions:
-   - Create or choose an IAM role.
-   - Attach permissions like access to S3, CloudWatch, Kinesis.
-5. Write or paste your code → Click **Deploy**.
-6. **Create Function URL** (optional):
-   - Go to function → Function URL → Create.
-   - Click the URL to test.
-7. Set Environment Variables (if needed).
-8. Add Trigger:
-   - E.g., S3: Create bucket → Lambda → Add Trigger → Select S3 bucket.
-   - E.g., Kinesis: Create Data Stream → Add as Trigger.
-
-## 3. Output
-The Lambda function processes data and sends the output to configured destination (e.g., S3, CloudWatch).
 
 ---
 ***
