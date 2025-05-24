@@ -64,6 +64,87 @@ The Lambda function processes data and sends the output to configured destinatio
 
 ---
 ***
+# 3. Sample Integration: Kinesis → Lambda → S3
+
+### 1. IAM Role Setup
+
+```bash
+IAM → Create Role → Select Lambda → Attach Policies (S3, Kinesis, CloudWatch)
+```
+
+>  **Tip**: Always attach the minimum permissions needed.
+
+### 2. Kinesis Stream
+
+```bash
+Kinesis → Create Data Stream → On-Demand → Name it → Create
+```
+
+>  **Tick**: Think of "Kine-Create-On-Demand" as KOD: "Kinesis On Demand"
+
+### 3. Lambda Function (Producer Example)
+
+```js
+const AWS = require('aws-sdk');
+const kinesis = new AWS.Kinesis();
+
+exports.handler = async (event) => {
+  const record = {
+    Data: JSON.stringify({ message: "Hello from Lambda" }),
+    PartitionKey: "key1",
+    StreamName: "my-kinesis-stream"
+  };
+  await kinesis.putRecord(record).promise();
+  return { statusCode: 200, body: "Data sent" };
+};
+```
+
+**Explanation**:
+- `require('aws-sdk')`: Load AWS SDK.
+- `new AWS.Kinesis()`: Create service object.
+- `putRecord(...)`: Push data to stream.
+- `PartitionKey`: Used to distribute records.
+- `StreamName`: Your stream name.
+
+>  **Tip**: Use `JSON.stringify()` for structured logs.
+
+### 4. Trigger Lambda with Kinesis
+
+```bash
+Lambda → Add Trigger → Choose Kinesis → Select Stream
+```
+
+### 5. Output to S3
+
+```js
+const AWS = require('aws-sdk');
+const s3 = new AWS.S3();
+
+exports.handler = async (event) => {
+  const data = event.Records.map(record => Buffer.from(record.kinesis.data, 'base64').toString('utf-8'));
+  await s3.putObject({
+    Bucket: 'my-output-bucket',
+    Key: `output-${Date.now()}.json`,
+    Body: JSON.stringify(data)
+  }).promise();
+  return { statusCode: 200 };
+};
+```
+
+**Explanation**:
+- `event.Records`: Kinesis records.
+- `Buffer.from(...).toString('utf-8')`: Decode Base64.
+- `putObject`: Upload file to S3.
+
+---
+
+##  Memory Tricks
+
+- **L-K-S**: Lambda → Kinesis → S3 (flow of data)
+- **PPT**: Permission → Producer → Trigger
+- **KOD**: Kinesis On-Demand
+---
+***
 
 # AWS CloudFront
 
