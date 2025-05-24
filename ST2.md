@@ -1,6 +1,6 @@
-# =========================================
+
 # Cloud Computing Guide
-# =========================================
+---
 ## AWS Load Balancer Setup Guide (Application Load Balancer)
 
 This guide walks through setting up an Application Load Balancer in AWS with two Amazon Linux EC2 instances. The goal is to distribute incoming traffic across multiple instances for better scalability and availability.
@@ -84,8 +84,7 @@ This guide walks through setting up an Application Load Balancer in AWS with two
 
 
 ---
-
-#*********************************************************************************************************************************
+***
 
 
 
@@ -169,8 +168,9 @@ aws dynamodb delete-item --table-name <table_name> \
 aws dynamodb delete-table --table-name <table_name>
 ```
 
+---
+***
 
-#*********************************************************************************************************************************
 ## Amazon RDS (SQL Database) Setup
 
 ### Steps to Create an RDS Database
@@ -315,8 +315,8 @@ SELECT * FROM <table_name>;
 ```
 
 
-
-#*********************************************************************************************************************************
+---
+***
 # AWS IAM User, Group, and Policy Setup
 
 ## 1. Creating an IAM User
@@ -362,7 +362,8 @@ SELECT * FROM <table_name>;
     ]
   }
 
-#*********************************************************************************************************************************
+---
+***
 # AWS Elastic Beanstalk Deployment Guide
 
 ## 1. Creating an Elastic Beanstalk Application
@@ -448,7 +449,7 @@ SELECT * FROM <table_name>;
 6. **Review & Apply Changes**.
 
 ---
-#*********************************************************************************************************************************
+***
 # AWS Simple Notification Service (SNS) Guide
 
 ## 1. Creating an SNS Topic
@@ -504,7 +505,9 @@ SELECT * FROM <table_name>;
 - Use **FIFO** topics when message order is critical.
 - Messages can be **encrypted** for security compliance.
 
-# *******************************************************************************
+---
+***
+
 # AWS CloudWatch Setup
 
 ### Steps to Create a CloudWatch Dashboard and Set Up Alarms  
@@ -534,4 +537,193 @@ SELECT * FROM <table_name>;
 - Click **Review and Create**.
 
 ---
+***
+# Docker: Deploying a MERN App
+
+## 1. Overview: What, Where, and Why
+
+- **Problem it solves**: Inconsistent environments between development and production.
+- **Where it's used**: Microservices, portable app packaging.
+- **Why use it**: Build once, run anywhere. Lightweight containers. Isolated environments.
+
+## 2. Steps to Deploy a MERN App with Docker
+
+### Folder Structure
+
+```
+mern-app/
+├── backend/
+│   ├── Dockerfile
+│   └── server.js
+├── frontend/
+│   ├── Dockerfile
+│   └── App.js
+└── docker-compose.yml
+```
+
+### Backend Dockerfile
+
+```Dockerfile
+FROM node:18
+WORKDIR /app
+COPY backend/package*.json ./
+RUN npm install
+COPY backend/ .
+EXPOSE 5000
+CMD ["node", "server.js"]
+```
+
+### Frontend Dockerfile
+
+```Dockerfile
+FROM node:18
+WORKDIR /app
+COPY frontend/package*.json ./
+RUN npm install
+COPY frontend/ .
+EXPOSE 3000
+CMD ["npm", "start"]
+```
+
+### docker-compose.yml
+
+```yaml
+version: "3.8"
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+```
+
+### Deploy
+
+```bash
+docker-compose up --build
+```
+
+Frontend: http://localhost:3000  
+Backend: http://localhost:5000
+
+---
+***
+
+# Kubernetes: Deploying a MERN App
+
+## 1. Overview: What, Where, and Why
+
+- **Problem it solves**: Managing and scaling containerized apps in production.
+- **Where it's used**: Multi-container apps, high availability, microservices.
+- **Why use it**: Automates scaling, rolling updates, service discovery, and self-healing.
+
+## 2. Why Kubernetes Over Docker Compose
+
+- **Compose** is suitable for development and simple apps.
+- **Kubernetes** supports production-grade orchestration, replicas, monitoring, autoscaling.
+
+## 3. Steps to Deploy MERN App
+
+### Pre-requisites
+
+- Install Minikube or set up Kubernetes cluster.
+- Docker images for backend and frontend should be built and pushed to Docker Hub.
+
+### Manifest Files
+
+#### `backend-deployment.yaml`
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backend
+          image: <dockerhub-username>/mern-backend
+          ports:
+            - containerPort: 5000
+```
+
+#### `backend-service.yaml`
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+spec:
+  selector:
+    app: backend
+  ports:
+    - port: 5000
+      targetPort: 5000
+```
+
+#### `frontend-deployment.yaml`
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: frontend
+          image: <dockerhub-username>/mern-frontend
+          ports:
+            - containerPort: 3000
+```
+
+#### `frontend-service.yaml`
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-service
+spec:
+  type: NodePort
+  selector:
+    app: frontend
+  ports:
+    - port: 3000
+      targetPort: 3000
+      nodePort: 31000
+```
+
+### Deploy
+
+```bash
+kubectl apply -f backend-deployment.yaml
+kubectl apply -f backend-service.yaml
+kubectl apply -f frontend-deployment.yaml
+kubectl apply -f frontend-service.yaml
+```
+
+Access frontend at: `http://<minikube-ip>:31000`
 
