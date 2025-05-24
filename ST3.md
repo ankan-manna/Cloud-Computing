@@ -143,3 +143,26 @@ The Lambda function processes data and sends the output to configured destinatio
    openssl rand -out plaintext.bin 32
    ```
 2. Use AWS CLI or OpenSSL to encrypt using the downloaded wrapping key and token.
+
+---
+***
+
+# AWS Lex
+
+## 1. Overview: What, Where, and Why
+
+- **Problem it solves**: Creates conversational interfaces using voice and text.
+- **Where it's used**: Chatbots, customer support, virtual assistants.
+- **Why use it**: Uses the same technology as Amazon Alexa. Integrates with Lambda and other AWS services.
+
+## 2. Steps to Set Up
+
+1. Go to Amazon Lex → **Create Bot**.
+2. Choose creation method: **Traditional**.
+3. Provide Bot Name and Description.
+4. IAM Permissions: Choose "Create a new role" or use an existing one.
+5. Set Session Timeout.
+6. Choose Language.
+7. Select Voice Interaction or Text Based.
+8. Click **Create Bot**.
+9. After bot creation, click **Build** to deploy.
