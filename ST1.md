@@ -1,6 +1,6 @@
-# =========================================
+
 # Cloud Computing Guide
-# =========================================
+
 
 ## Amazon Machine Image (AMI) Setup
 
@@ -38,7 +38,8 @@
 - Click **Launch Instance** and wait for initialization.
 - Connect to the new instance via **SSH** and verify that `/proj` from the previous server exists.
 
-#*********************************************************************************************************************************
+---
+***
 ## Simple Storage Service (S3) & Static Website Hosting
 
 ### 1. Create an S3 Bucket
@@ -92,7 +93,8 @@
 - Navigate to **Bucket** → **Management** → **Lifecycle Rule**.
 - Configure **automatic transitions** or **expiration rules** for objects.
 
-#*********************************************************************************************************************************
+---
+***
 ## Virtual Private Cloud (VPC) Setup
 
 ### 1. Create a VPC
@@ -125,7 +127,8 @@
   - **Target**: Select the **Internet Gateway**.
 - Save changes.
 
-#*********************************************************************************************************************************
+---
+***
 ## Auto Scaling Setup
 
 ### 1. Create a Launch Template
