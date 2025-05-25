@@ -184,6 +184,103 @@ exports.handler = async (event) => {
 ---
 ***
 
+# AWS CloudFormation
+
+## 1. Overview: What, Where, and Why
+
+- **What**: Infrastructure as Code (IaC) service to model and provision AWS resources.
+- **Where it's used**: Automate infrastructure setup in a reliable, repeatable way.
+- **Why use it**:
+  - Version-controlled infrastructure.
+  - Easier replication across environments.
+  - Integration with CI/CD pipelines.
+  - Rollback capabilities on failure.
+
+## 2. Problem it Solves
+
+- Manual setup of cloud infrastructure is error-prone and slow.
+- CloudFormation automates resource provisioning and enforces consistency.
+
+## 3. Where it's Used
+
+- Automating EC2, S3, RDS, VPC setup.
+- Deploying scalable web apps or microservices.
+- Infrastructure replication in multi-account environments.
+
+## 4. Steps to Set Up
+
+### Create a CloudFormation Template
+
+Use YAML or JSON. Example: EC2 with Security Group
+
+```yaml
+AWSTemplateFormatVersion: '2010-09-09'
+Description: EC2 instance with Security Group and NGINX
+
+Resources:
+  MySecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Allow HTTP
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+
+  MyEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-0c02fb55956c7d316  # Update to a valid region-specific Amazon Linux 2 AMI
+      SecurityGroupIds:
+        - !Ref MySecurityGroup
+      UserData:
+        Fn::Base64: |
+          #!/bin/bash
+          yum update -y
+          yum install nginx -y
+          systemctl start nginx
+          systemctl enable nginx
+          echo $(hostname -I) >/usr/share/nginx/html/index.html
+```
+
+### Deploy the Template
+
+1. Go to **CloudFormation Console**.
+2. Click **Create stack** → With new resources (standard).
+3. Choose:
+   - **Template source**: Upload a template file or S3 URL.
+4. Enter stack name (e.g., `NginxEC2Stack`).
+5. Configure options (optional tags, rollback, etc.).
+6. Click **Next** → **Create stack**.
+
+### Post Deployment
+
+- Go to **EC2 Console** → Get public IP of the instance.
+- Open in browser: `http://<Public-IP>` to confirm NGINX is running.
+
+## 5. Optional Enhancements
+
+- Add output section to get instance IP:
+```yaml
+Outputs:
+  InstancePublicIp:
+    Description: "Public IP of EC2 instance"
+    Value: !GetAtt MyEC2Instance.PublicIp
+```
+
+- Use Parameters section for reusable values (AMI, instance type, etc.).
+- Add RDS, S3, or Auto Scaling with other resource blocks.
+
+## 6. Tips
+
+- Always validate template with `cfn-lint` or AWS Console before deploy.
+- Use Change Sets to preview modifications.
+- Store templates in Git for version control.
+
+---
+***
 # AWS Key Management Service (KMS)
 
 ## 1. Overview: What, Where, and Why
