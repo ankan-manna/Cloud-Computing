@@ -1,0 +1,838 @@
+Here are the answers to your questions in MCQ format:
+
+1. What is the main purpose of cloud computing?
+a) To store data on local servers
+b) To provide computing resources over the internet
+c) To replace all physical servers
+d) To eliminate the need for software updates
+
+Correct Answer: b)
+
+2. Which of the following is a key characteristic of cloud computing?
+a) On-demand self-service
+b) Limited scalability
+c) Only for personal use
+d) Requires physical access to servers
+
+Correct Answer: a)
+
+3. Which cloud service model provides a platform for developers to build applications?
+a) SaaS
+b) IaaS
+c) PaaS
+d) DaaS
+
+Correct Answer: c)
+
+4. What is a major disadvantage of cloud computing?
+a) Reduced flexibility
+b) High initial investment
+c) Security concerns
+d) Unlimited storage capacity
+
+Correct Answer: c)
+
+5. What does EC2 stand for?
+a) Elastic Compute Cloud
+b) Elastic Container Cluster
+c) Enterprise Cloud Compute
+d) Elastic Cloud Container
+
+Correct Answer: a)
+
+6. Auto scaling helps in:
+a) Reducing costs manually
+b) Automatically adjusting capacity
+c) Deleting instances permanently
+d) Fixing security flaws
+
+Correct Answer: b)
+
+7. S3 is designed for storing:
+a) Block data
+b) Object-based data
+c) Archive data
+d) Database backups
+
+Correct Answer: b)
+
+8. An Elastic IP address is:
+a) A static IPv4 address
+b) A dynamic IPv6 address
+c) A temporary DNS
+d) A reserved MAC address
+
+Correct Answer: a)
+
+9. What is the purpose of an Internet Gateway in AWS?
+a) To encrypt traffic
+b) To manage DNS records
+c) To block SSH access
+d) To connect VPC to the internet
+
+Correct Answer: d)
+
+10. What is a VPC used for?
+a) Hosting AMIs
+b) Isolating AWS resources
+c) Managing IAM roles
+d) Archiving data
+
+Correct Answer: b)
+
+11. What does SaaS stand for in cloud computing?
+a) System as a Service
+b) Storage as a Service
+c) Security as a Service
+d) Software as a Service
+
+Correct Answer: d)
+
+12. Which of the following is a benefit of cloud computing?
+a) Requires high maintenance
+b) Unlimited bandwidth
+c) Reduced IT infrastructure costs
+d) Requires local storage for all data
+
+Correct Answer: c)
+
+13. What is the main drawback of cloud computing in terms of data security?
+a) It cannot be encrypted
+b) It is always stored on the client's device
+c) It is vulnerable to cyber threats
+d) It cannot be accessed remotely
+
+Correct Answer: c)
+
+14. Which deployment model is shared among multiple organizations with similar requirements?
+a) Community cloud
+b) Private cloud
+c) Public cloud
+d) Hybrid cloud
+
+Correct Answer: a)
+
+15. What does AMI stand for?
+a) Amazon Machine Instance
+b) Amazon Machine Image
+c) Automated Machine Image
+d) Automated Managed Instance
+
+Correct Answer: b)
+
+16. VMware Player is used for:
+a) Creating AMIs
+b) Running virtual machines
+c) Auto scaling
+d) Managing S3 buckets
+
+Correct Answer: b)
+
+17. Which port allows SSH access?
+a) Port 80
+b) Port 22
+c) Port 443
+d) Port 3389
+
+Correct Answer: b)
+
+18. How many Elastic IPs can you allocate by default?
+a) 5
+b) 10
+c) Unlimited
+d) 2
+
+Correct Answer: a)
+
+19. How do ACLs differ from Security Groups?
+a) ACLs are stateless
+b) ACLs are applied at instance level
+c) Security Groups use allow/deny rules
+d) ACLs are mandatory
+
+Correct Answer: a)
+
+20. What is a VPC used for?
+a) Hosting AMIs
+b) Isolating AWS resources
+c) Managing IAM roles
+d) Archiving data
+
+Correct Answer: b)
+
+21. Which of the following is NOT a characteristic of cloud computing?
+a) Elasticity
+b) On-demand self-service
+c) Limited accessibility
+d) Pay-as-you-go pricing
+
+Correct Answer: c)
+
+22. What does IaaS provide in cloud computing?
+a) Only software solutions
+b) Storage, networking, and virtualization
+c) Pre-installed applications
+d) Security services only
+
+Correct Answer: b)
+
+23. Which deployment model allows public access to cloud resources?
+a) Private cloud
+b) Public cloud
+c) Hybrid cloud
+d) Community cloud
+
+Correct Answer: b)
+
+24. Which of the following is an advantage of cloud computing?
+a) High maintenance cost
+b) No remote access
+c) Limited storage
+d) Scalability
+
+Correct Answer: d)
+
+25. Which protocol is primarily used to establish a secure connection with an Ubuntu instance on AWS?
+a) SSH (Secure Shell Protocol)
+b) FTP (File Transfer Protocol)
+c) RDP (Remote Desktop Protocol)
+d) Telnet
+
+Correct Answer: a)
+
+26. Which AWS service can be used to automatically scale EC2 instances based on demand?
+a) AWS Lambda
+b) Amazon EC2 Auto Scaling
+c) AWS Elastic Beanstalk
+d) Amazon Route 53
+
+Correct Answer: b)
+
+27. What do Security Groups control?
+a) Subnet traffic
+b) Region selection
+c) Instance-level traffic
+d) Data encryption
+
+Correct Answer: c)
+
+28. What type of storage is Amazon S3?
+a) Block storage
+b) Archive storage
+c) File storage
+d) Object storage
+
+Correct Answer: d)
+
+29. What is a VPC used for?
+a) Hosting AMIs
+b) Isolating AWS resources
+c) Managing IAM roles
+d) Archiving data
+
+Correct Answer: b)
+
+30. What is the full form of "ACL" in AWS?
+a) Application Control List
+b) Access Control List
+c) Automated Configuration Layer
+d) Access Check Layer
+
+Correct Answer: b)
+
+31. What is a key advantage of cloud computing?
+a) High latency
+b) Cost efficiency
+c) No internet requirement
+d) Fixed storage capacity
+
+Correct Answer: b)
+
+32. What is the primary function of a Type 2 hypervisor?
+a) It runs directly on hardware
+b) It is installed on an existing operating system
+c) It eliminates the need for virtualization
+d) It is installed on an existing oper
+
+Correct Answer: b)
+
+33. What is a primary disadvantage of cloud computing?
+a) High energy consumption
+b) Security and privacy risks
+c) No access to applications
+d) Poor performance
+
+Correct Answer: b)
+
+34. Which of the following is NOT a cloud computing service model?
+a) SaaS
+b) PaaS
+c) IaaS
+d) HaaS
+
+Correct Answer: d)
+
+35. Which AWS service is used to launch and manage virtual servers in the cloud?
+a) Amazon S3
+b) AWS Lambda
+c) Amazon EC2
+d) Amazon RDS
+
+Correct Answer: c)
+
+36. Auto scaling helps in:
+a) Reducing costs manually
+b) Automatically adjusting capacity
+c) Deleting instances permanently
+d) Fixing security flaws
+
+Correct Answer: b)
+
+37. What is the purpose of an Internet Gateway in AWS?
+a) To encrypt traffic
+b) To manage DNS records
+c) To block SSH access
+d) To connect VPC to the internet
+
+Correct Answer: d)
+
+38. Which protocol is primarily used to establish a secure connection with an Ubuntu instance on AWS?
+a) FTP (File Transfer Protocol)
+b) SSH (Secure Shell Protocol)
+c) RDP (Remote Desktop Protocol)
+d) Telnet
+
+Correct Answer: b)
+
+39. S3 is designed for storing:
+a) Object-based data
+b) Block data
+c) Archive data
+d) Database backups
+
+Correct Answer: a)
+
+40. What does VPC stand for?
+a) Virtual Protected Cluster
+b) Variable Private Connection
+c) Virtual Public Cloud
+d) Virtual Private Cloud
+
+Correct Answer: d)
+
+41. Which format is used for policy document in IAM?
+a) CSV
+b) XML
+c) TXT
+d) JSON
+
+Correct Answer: d)
+
+42. Which AWS service can you directly integrate with Elastic Beanstalk to store application versions?
+a) S3
+b) EC2
+c) IAM
+d) Lambda
+
+Correct Answer: a)
+
+43. What is AWS Elastic Beanstalk?
+a) A virtual machine service
+b) A platform as a service (PaaS) for deploying
+c) An object storage service
+d) A serverless compute engine
+
+Correct Answer: b)
+
+44. What is Docker Hub?
+a) A local Docker repository
+b) A cloud-based registry for Docker images
+c) A tool to manage Docker networks
+d) A command-line interface for Docker
+
+Correct Answer: b)
+
+45. Which command is used to create and start a Docker container from an image?
+a) docker build
+b) docker pull
+c) docker run
+d) docker start
+
+Correct Answer: c)
+
+46. What is the primary function of Application Load Balancer?
+a) Store data
+b) Distribute HTTP/HTTPS traffic
+c) Monitor resources
+d) Send notifications
+
+Correct Answer: b)
+
+47. DynamoDB is best suited for:
+a) NoSQL database needs
+b) Relational databases
+c) File storage
+d) Data archival
+
+Correct Answer: a)
+
+48. What does RDS stand for?
+a) Relational Data Service
+b) Relational Database Service
+c) Real-time Data Storage
+d) Remote Data Sync
+
+Correct Answer: b)
+
+49. An RDS snapshot is used for:
+a) Backup and restore
+b) Monitoring
+c) Load balancing
+d) Data encryption
+
+Correct Answer: a)
+
+50. CloudWatch is primarily used for:
+a) Monitoring AWS resources
+b) Data storage
+c) Load balancing
+d) Messaging
+
+Correct Answer: a)
+
+51. What is an IAM policy?
+a) A set of rules that define actions
+b) A user group
+c) A log file
+d) A key pair
+
+Correct Answer: a)
+
+52. What is AWS Elastic Beanstalk?
+a) A container orchestration service
+b) A fully managed platform for running web apps
+c) An AI-powered deployment tool
+d) A database management service
+
+Correct Answer: b)
+
+53. Which of the following is NOT a component of an Elastic Beanstalk environment?
+a) Application
+b) Environment
+c) Deployment Package
+d) Lambda Function
+
+Correct Answer: d)
+
+54. What does the docker exec command do?
+a) Runs a new container
+b) Executes a command inside a running container
+c) Stops a container
+d) Deletes a container
+
+Correct Answer: b)
+
+55. Which of the following best describes an image in Docker?
+a) A running instance of a container
+b) A lightweight, immutable file that contains
+c) A virtual machine snapshot
+d) A configuration file for Docker
+
+Correct Answer: b)
+
+56. What does provisioned throughput define in DynamoDB?
+a) Read/write capacity
+b) Data encryption
+c) Monitoring metrics
+d) Log storage
+
+Correct Answer: a)
+
+57. Application Load Balancer routes traffic based on:
+a) S3 buckets
+b) IAM roles
+c) CloudWatch metrics
+d) Host, path, or source IP
+
+Correct Answer: d)
+
+58. CloudWatch Log Groups are used to:
+a) Encrypt data
+b) Send notifications
+c) Load balance traffic
+d) Store and manage logs
+
+Correct Answer: d)
+
+59. What is the purpose of RDS Multi-AZ?
+a) High availability
+b) Cost reduction
+c) Faster backups
+d) Data encryption
+
+Correct Answer: a)
+
+60. What is RDS Storage Auto Scaling?
+a) Stores logs
+b) Encrypts data
+c) Monitors performance
+d) Automatically increases storage
+
+Correct Answer: d)
+
+61. Which of the following is NOT an IAM entity?
+a) User
+b) Group
+c) Instance
+d) Role
+
+Correct Answer: c)
+
+62. AWS Elastic Beanstalk is classified as which type of service?
+a) IaaS
+b) SaaS
+c) DaaS
+d) PaaS
+
+Correct Answer: d)
+
+63. Which AWS service does Elastic Beanstalk integrate with to monitor application health?
+a) Amazon CloudWatch
+b) AWS Config
+c) AWS Shield
+d) Amazon Inspector
+
+Correct Answer: a)
+
+64. How do you stop a running container?
+a) docker pause &lt;container id>
+b) docker stop &lt;container id>
+c) docker terminate &lt;container id>
+d) docker exit &lt;container id>
+
+Correct Answer: b)
+
+65. What does the -d flag do when running a container with docker run?
+a) Runs the container in debug mode
+b) Deletes the container after execution
+c) Runs the container in the background (detached)
+d) Displays logs from the container
+
+Correct Answer: c)
+
+66. What is DynamoDB On-Demand mode?
+a) Pay-per-request pricing
+b) Fixed capacity pricing
+c) Data encryption
+d) Log storage
+
+Correct Answer: a)
+
+67. What is the purpose of Application Load Balancer health checks?
+a) Monitor instance health
+b) Encrypt traffic
+c) Store logs
+d) Send notifications
+
+Correct Answer: a)
+
+68. What is the default port for MySQL in RDS?
+a) 1433
+b) 5432
+c) 1521
+d) 3306
+
+Correct Answer: d)
+
+69. What is RDS deletion protection?
+a) Stores logs
+b) Encrypts data
+c) Monitors performance
+d) Prevents accidental deletion
+
+Correct Answer: d)
+
+70. What actions can a CloudWatch alarm trigger for EC2 instance?
+a) Stop, terminate, or reboot instance
+b) Encrypt data
+c) Store logs
+d) None of the above
+
+Correct Answer: a)
+
+71. What is the primary purpose of AWS IAM?
+a) To store files in the cloud
+b) To manage user access and permissions
+c) To deploy applications automatically
+d) To monitor cloud resources
+
+Correct Answer: b)
+
+72. Elastic Beanstalk automatically handles which of the following?
+a) Application deployment only
+b) Capacity provisioning, load balancing, and auto-scaling
+c) Manual server configuration
+d) DNS management
+
+Correct Answer: b)
+
+73. Which database service can you provision directly from the Elastic Beanstalk console as part of your environment?
+a) Amazon Aurora
+b) Amazon DynamoDB
+c) Amazon RDS
+d) Amazon Redshift
+
+Correct Answer: c)
+
+74. Which Docker command is used to download an image from Docker Hub to your local machine?
+a) docker fetch
+b) docker pull
+c) docker clone
+d) docker import
+
+Correct Answer: b)
+
+75. Which command removes all stopped containers, unused networks, dangling images, and build cache?
+a) docker system prune
+b) docker system cleanup
+c) docker container prune
+d) docker rm -a
+
+Correct Answer: a)
+
+76. What does a Scan operation do in DynamoDB?
+a) Encrypts data
+b) Updates an item
+c) Reads all items in a table
+d) Deletes an item
+
+Correct Answer: c)
+
+77. What is the purpose of Security Groups in Application Load Balancer?
+a) Control inbound/outbound traffic
+b) Encrypt traffic
+c) Store logs
+d) Monitor performance
+
+Correct Answer: a)
+
+78. What is an SNS Topic used for?
+a) Monitor resources
+b) Store messages
+c) Group subscribers
+d) Load balance traffic
+
+Correct Answer: c)
+
+79. What is RDS Cross-Region Replication used for?
+a) Data encryption
+b) Cost reduction
+c) Disaster recovery
+d) Faster backups
+
+Correct Answer: c)
+
+80. Which database engine is NOT supported by RDS?
+a) DynamoDB
+b) MySQL
+c) PostgreSQL
+d) Oracle
+
+Correct Answer: a)
+
+81. Which deployment model is best suited for organizations that want both private and public?
+a) Private cloud
+b) Public cloud
+c) Community cloud
+d) Hybrid cloud
+
+Correct Answer: d)
+
+82. How does virtualization contribute to cloud computing?
+a) It eliminates the need for internet access
+b) It allows multiple virtual machines to run on a single physical machine
+c) It removes the need for operating systems
+d) It reduces cloud storage capacity
+
+Correct Answer: b)
+
+83. You know that you need 24 CPUs for your production server. You also know that your compute capacity is going to remain fixed until next year, so you need to keep the production server up and running during that time. What pricing option would you go with?
+a) SPOT INSTANCE
+b) ON DEMAND INSTANCE
+c) THREE YEAR RESERVED INSTANCE
+d) ONE YEAR RESERVED INSTANCE
+
+Correct Answer: c)
+
+84. What do Security Groups control in AWS?
+a) Instance pricing
+b) Inbound/outbound traffic
+c) Region selection
+d) AMI creation
+
+Correct Answer: b)
+
+85. Out of given options select the identity in AWS, which secures VPC traffic?
+a) Security Groups only
+b) ACLs only
+c) Both Security Groups and ACLs
+d) IAM roles
+
+Correct Answer: c)
+
+86. Which cloud service model provides maximum control over virtual machines and networking resources?
+a) IaaS
+b) PaaS
+c) SaaS
+d) DaaS
+
+Correct Answer: a)
+
+87. What is the range of CIDR blocks that can be used inside a VPC?
+a) Between /10 to /24
+b) Between /14 and /24
+c) Between /16 and /28
+d) Between /16 and /30
+
+Correct Answer: d)
+
+88. What is a key benefit of auto scaling?
+a) Manual instance management
+b) Cost efficiency
+c) Static IP allocation
+d) Data encryption
+
+Correct Answer: b)
+
+89. Company salespeople upload their sales figures daily. A Solutions Architect needs a durable storage solution for these documents that also protects against users accidentally deleting important documents. Which action will protect against unintended user actions?
+a) Store data in an EBS volume and create snapshots
+b) Store data on EC2 instance storage
+c) Store data in two S3 buckets in different AZs
+d) Store data in an S3 bucket and enable versioning
+
+Correct Answer: d)
+
+90. How does a VPC differ from a subnet?
+a) VPC is regional; subnets are AZ-specific
+b) VPC manages IAM roles
+c) Subnets encrypt data
+d) Subnets are global
+
+Correct Answer: a)
+
+91. What is the role of virtualization in cloud computing?
+a) It provides remote access to physical machines
+b) It creates multiple virtual instances on a single physical machine
+c) It restricts resource sharing between users
+d) It prevents system crashes
+
+Correct Answer: b)
+
+92. You are in the process of designing a three-tier architecture for a company. The company wants all the components to be redundant, which means all the EC2 servers need to be redundant in different AZs. You are planning to put the web server in a public subnet and the application and database servers in a private subnet. The database will be hosted on EC2 servers, and you are planning to use two AZs for this. To accomplish this, what is the minimum number of subnets you need?
+a) Four: One for the web server and another for the application and database server in each AZ
+b) Three: one for the web server, one for the application server, and one for the database server
+c) Two: One for the web server, one for the application server, and one for the database server in each AZ
+d) Six: one for the web server, one for the application server, and one for the database server in each AZ
+
+Correct Answer: a)
+
+93. What is a key benefit of auto scaling?
+a) Fixed instance count
+b) Cost optimization
+c) Manual backups
+d) Static IP allocation
+
+Correct Answer: b)
+
+94. How does S3 versioning help in data management?
+a) Reduces latency
+b) Provides automatic replication
+c) Maintains multiple versions
+d) Increases object size
+
+Correct Answer: c)
+
+95. How does a VPC differ from a subnet?
+a) VPC is regional, subnets are AZ-specific
+b) Subnets manage IAM roles
+c) VPC is for archival
+d) VPC encrypts data
+
+Correct Answer: a)
+
+96. Why is a hybrid cloud model beneficial?
+a) It combines the advantages of both public and private clouds
+b) It eliminates the need for on-premises servers
+c) It is a model only for small businesses
+d) It is exclusively used for government organizations
+
+Correct Answer: a)
+
+97. Which scenario suits a community cloud?
+a) A single company's internal IT
+b) Multiple banks sharing resources
+c) A public website
+d) A hybrid backup system
+
+Correct Answer: b)
+
+98. You are going to deploy an application across six EC2 servers. You are planning to use three availability zones for deploying the EC2 instances, but your business needs 100 percent fault tolerance if any of the AZs go down. How do you ensure you are able to meet your business needs? You are planning to use us-east-1, us-east-2, and us-east-3 as AZs for deploying your application.
+a) Use three EC2 instances in us-east-1, three EC2 instances in us-east-2, and zero EC2 instances in us-east-3
+b) Use four EC2 instances in us-east-1, two EC2 instances in us-east-2, and two EC2 instances in us-east-3
+c) Use three EC2 Instances in us-east-1, three EC2 instances in us-east-2, and three EC2 instances in us-east-3
+d) Use two EC2 instances in us-east-1, two EC2 instances in us-east-2, and two EC2 instances in us-east-3
+
+Correct Answer: c)
+
+99. Why use Elastic IP?
+a) To reduce costs
+b) To retain a static IP after instance stop
+c) For load balancing
+d) For dynamic DNS
+
+Correct Answer: b)
+
+100. What AWS service allows you to create and manage virtual networks in the cloud?
+a) Amazon VPC
+b) Amazon S3
+c) AWS Direct Connect
+d) Amazon Route 53
+
+Correct Answer: a)
+
+101. When you first create an AWS account, you begin with a single sign-in identity that has complete access to all AWS services and resources in the account. This identity is called:
+a) IAM user
+b) root user
+c) none of these
+d) super user
+
+Correct Answer: b)
+
+102. What does the docker logs <container_id> command do?
+a) Shows log messages from a container
+b) Shows system logs for the Docker daemon
+c) Starts logging for a container
+d) Deletes logs of a container
+
+Correct Answer: a)
+
+103. Which of the following is a core component of Kubernetes?
+a) Load Balancer
+b) Kubelet
+c) Jenkins
+d) Ansible
+
+Correct Answer: b)
+
+104. Which load balancer types is deprecated in AWS?
+a) ALB
+b) Classic Load Balancer
+c) Network Load Balancer
+d) None of Target Group
+
+Correct Answer: b)
+
+105. Amazon RDS automatically handles routine database tasks such as _______ and _______.
+a) Hardware maintenance: Automated backups
+b) Patching the database software: Manual scaling of compute resources
+c) Monitoring network traffic: Read re
