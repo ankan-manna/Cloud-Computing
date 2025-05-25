@@ -382,6 +382,8 @@ SELECT * FROM <table_name>;
 - Choose **Presets** if needed.
 
 ---
+## If we want to more feature like security, control then do the below steps, other wise it creates EC2, LoadBalencer... automatically.
+---
 
 ### Step 2: IAM Service Roles
 - **Add Service Role**:
