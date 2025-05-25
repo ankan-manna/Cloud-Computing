@@ -65,7 +65,7 @@ This guide walks through setting up an Application Load Balancer in AWS with two
         - SSH (port 22)
 7. **Listener and Routing**:
     - Listener protocol: HTTP on port 80
-    - Default action: Forward to your **Target Group** created earlier.
+    - Default action: Select the **Target Group** created earlier.
 
 8. Click **Create Load Balancer**.
 
